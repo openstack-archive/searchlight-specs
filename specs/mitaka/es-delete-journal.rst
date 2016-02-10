@@ -64,15 +64,10 @@ with this blueprint.
 As a side note, keeping track of deleted documents will allow Searchlight to
 easily provide a "delta" functionality if so desired in the future.
 
-ElasticSearch provides functionality to allow Searchlight to track deleted
-documents. Instead of rashly removing a document, we can avail ourselves of the
-TTL (Time To Live) field for that document. This will allow the document to
-exist until all ordering issues are resolved. Once ElasticSearch is
-asynchronously satisfied, the document will fade away into the distant recesses
-of Searchlight's collective memory.
-
-The concept and use of the TTL field is described in the ElasticSearch
-guides [2].
+The previous incarnation of this spec detailed setting a deletion flag and
+using ElasticSearch's TTL functionality to delay deleting documents. It turns
+out that ElasticSearch has this functionality built in when versioning is in
+use (for an explanation, see the bottom of [3]).
 
 Examples
 --------
@@ -132,6 +127,28 @@ thus handled correctly.
 
 Proposed Change
 ===============
+
+There is an index setting named 'index.gc_deletes' that defaults to 60 seconds.
+When a document is deleted *with a specified version* it is not immediately
+deleted from the index. Instead, it's marked as ready for garbage collection
+(in the document sense, not memory sense). If an update is posted with a later
+version, the document is resurrected. If a document is posted with an earlier
+version, it raises a ConflictError, as would be the case with an 'alive'
+document. The deleted document is *not* visible in searches.
+
+Since this is essentially identical to the implementation described below, and
+appears to be fully supported in ElasticSearch 2.x, there is no point
+implementing it ourselves. We may decide to recommend a higher `gc_deletes`
+value, but the only change necessary is to pass a version as part of
+delete operations (see [4]).
+
+Alternatives
+------------
+
+An alternative is expressed in the 'previous design' that follows.
+
+Previous Design
+---------------
 
 Ecce proponente! With this blueprint, the basic idea is to keep the state of
 a deleted document around until no longer needed. At a high level, we will
@@ -194,7 +211,7 @@ When a document is created, the mapping will need to add the new "deleted"
 field and enable TTL functionality. The "deleted" field will need to be set
 appropriately. If the "deleted" field is set to true we will not modify
 the document. These modifications depend on the version functionality being
-in place [3].
+in place [2].
 
 Configuration Changes
 ----------------------
@@ -230,24 +247,17 @@ for the "deleted" metadata field.
     the plug-ins. This will allow for "delta" functionality to be added to
     Searchlight in the future. This work is the same as option (2).
 
-Alternatives
-------------
-
-ElasticSearch has garbage collection functionality. Further research can
-determine if garbage collection is a better alternative to using TTLs. In
-particular, modifying the garbage collection interval [4].
-
 References
 ==========
 
 [1] The Zero Downtime Re-indexing work is described here:
     https://blueprints.launchpad.net/searchlight/+spec/zero-downtime-reindexing
 
-[2] The concept of a TTL field is described here:
-    https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-ttl-field.html/searchlight/obj1
-
-[3] External versions added to ElasticSearch documents is described here:
+[2] External versions added to ElasticSearch documents is described here:
     https://review.openstack.org/#/c/255751/
 
-[4] ElasticSearch garbage collection is disucssed here:
-    https://www.elastic.co/guide/en/elasticsearch/guide/current/_monitoring_individual_nodes.html#garbage_collector_primer
+[3] ElasticSearch *document* garbage collection is discussed here:
+    https://www.elastic.co/blog/elasticsearch-versioning-support
+
+[4] Bug report for handling out-of-order notifications:
+    https://bugs.launchpad.net/searchlight/+bug/1522271
