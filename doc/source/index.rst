@@ -43,6 +43,15 @@ Mitaka
 
    specs/mitaka/**
 
+Ocata
+=====
+
+.. toctree::
+   :glob:
+   :maxdepth: 1
+
+   specs/ocata/**
+
 ==================
 Indices and tables
 ==================
