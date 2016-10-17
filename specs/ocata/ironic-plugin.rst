@@ -35,12 +35,8 @@ from periodical polling tasks.
 Proposed Change
 ===============
 
-1. Searchlight listener should be changed because ironic can use any
-notifications message priority, not only INFO ([1]_). For possibility of use
-this feature and backward compatibility new configuration option (list type)
-``additional_priorities`` will be added to ``listener`` group. Allowed
-values are "audit", "debug", "warn", "error", "critical" and "sample". Default
-value is not set (no additional priorities).
+1. Searchlight listener should be changed, because ironic can use also ERROR
+notifications message priority. New handler for ERROR priority will be added.
 
 2. Plugin with indexers and notification handlers for ironic nodes, ports and
 chassis shoud be implemented.
