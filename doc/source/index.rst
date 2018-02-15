@@ -8,7 +8,7 @@ Our process is meant to allow users, developers, and operators to express
 their desires for new features using Launchpad blueprints. A review of
 blueprints is done regularly. These may turn directly into features with
 in-tree documentation, or for complex requests, additional specifications
-(“specs”) may be needed. This page captures those more complex requests.
+("specs") may be needed. This page captures those more complex requests.
 
 Please read the Searchlight process documentation on feature requests and
 bug reports:
