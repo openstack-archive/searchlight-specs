@@ -141,7 +141,7 @@ The algorithm for searchlight-manage index sync will be changed to the following
  * Create a new index in ElasticSearch. Any mapping changes to the index are done
    now, before the index is used.
  * Add the new index to the listener(s) alias. At this point, the listener’s alias is
-   pointing to multiple indexes. The new index is now “live” and receiving data. Any
+   pointing to multiple indexes. The new index is now "live" and receiving data. Any
    data received by the listener(s) will be sent to both indexes.
 
     * There is an issue with indexing an alias with multiple indexes [2]. The
