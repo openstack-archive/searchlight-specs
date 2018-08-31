@@ -13,7 +13,7 @@ in-tree documentation, or for complex requests, additional specifications
 Please read the Searchlight process documentation on feature requests and
 bug reports:
 
- * http://docs.openstack.org/developer/searchlight
+ * https://docs.openstack.org/searchlight/latest/
 
 Newton
 ======
