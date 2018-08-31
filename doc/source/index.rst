@@ -61,7 +61,6 @@ Pike
 
    specs/pike/**
 
-==================
 Indices and tables
 ==================
 
