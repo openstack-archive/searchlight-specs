@@ -5,7 +5,7 @@ Searchlight Project Specifications
 ==================================
 
 Our process is meant to allow users, developers, and operators to express
-their desires for new features using Launchpad blueprints. A review of
+their desires for new features using Storyboard. A review of
 blueprints is done regularly. These may turn directly into features with
 in-tree documentation, or for complex requests, additional specifications
 ("specs") may be needed. This page captures those more complex requests.

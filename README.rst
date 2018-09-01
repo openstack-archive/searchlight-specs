@@ -13,10 +13,10 @@ OpenStack Searchlight Specifications
 
 Please read the Searchlight process documentation on feature requests and bug reports:
 
-   http://docs.openstack.org/developer/searchlight/feature-requests-bugs.html 
+   https://docs.openstack.org/searchlight/latest/contributor/feature-requests-bugs.html
 
 This git repository is used to hold approved design specifications for additions
-to the Searchlight project.  Reviews of the specs are done in gerrit, using a
+to the Searchlight project. Reviews of the specs are done in gerrit, using a
 similar workflow to how we review and merge changes to the code itself.
 
 The layout of this repository is::
@@ -30,26 +30,24 @@ be copied, then filled in with the details of a new blueprint for
 convenience.
 
 Specifications are proposed for a given release by adding them to the
-`specs/<release>` directory and posting it for review.  The implementation
+`specs/<release>` directory and posting it for review. The implementation
 status of a blueprint for a given release can be found by looking at the
-blueprint in launchpad.  Not all approved blueprints will get fully implemented.
+blueprint in launchpad. Not all approved blueprints will get fully implemented.
 
-Specifications have to be re-proposed for every release.  The review may be
+Specifications have to be re-proposed for every release. The review may be
 quick, but even if something was previously approved, it should be re-reviewed
 to make sure it still makes sense as written.
 
-Prior to the Miktaka development cycle, this repository was not used for spec
-reviews.  Reviews prior to Mitaka were completed entirely through Launchpad
-blueprints::
+Spec reviews were completed entirely through Storyboard::
 
-  http://blueprints.launchpad.net/searchlight
+  https://storyboard.openstack.org/#!/project_group/93
 
 For more information about working with gerrit, see::
 
-  http://docs.openstack.org/infra/manual/developers.html#development-workflow
+  https://docs.openstack.org/infra/manual/developers.html#development-workflow
 
 To validate that the specification is syntactically correct (i.e. get more
-confidence in the Jenkins result), please execute the following command::
+confidence in the Zuul result), please execute the following command::
 
   $ tox
 
