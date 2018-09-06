@@ -4,64 +4,33 @@
 Searchlight Project Specifications
 ==================================
 
-Our process is meant to allow users, developers, and operators to express
-their desires for new features using Storyboard. A review of
-blueprints is done regularly. These may turn directly into features with
-in-tree documentation, or for complex requests, additional specifications
-("specs") may be needed. This page captures those more complex requests.
+This page contains the approved Searchlight specifications.
 
-Please read the Searchlight process documentation on feature requests and
-bug reports:
+The specification template can be found at:
 
- * https://docs.openstack.org/searchlight/latest/
+https://github.com/openstack/searchlight-specs/blob/master/specs/template.rst
 
-Newton
-======
+If you want to contribute to Searchlight, please find
+the information at:
 
-.. toctree::
-   :glob:
-   :maxdepth: 1
+https://docs.openstack.org/searchlight/
 
-   specs/newton/**
-
-.. The following can be added once backlog specs are added
-.. In the meantime, it causes sphinx errors.
-
-.. Backlog
-.. =======
-
-.. .. toctree::
-
-..   specs/backlog/**
-
-Mitaka
-======
+Specifications
+--------------
 
 .. toctree::
    :glob:
-   :maxdepth: 1
+   :maxdepth: 2
 
-   specs/mitaka/**
-
-Ocata
-=====
-
-.. toctree::
-   :glob:
-   :maxdepth: 1
-
-   specs/ocata/**
-
-Pike
-====
-
-.. toctree::
-   :glob:
-   :maxdepth: 1
-
-   specs/pike/**
+   specs/stein/index
+   specs/rocky/index
+   specs/queens/index
+   specs/pike/index
+   specs/ocata/index
+   specs/newton/index
+   specs/mitaka/index
 
 Indices and tables
-==================
+------------------
 
 * :ref:`search`
