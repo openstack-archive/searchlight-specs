@@ -39,9 +39,9 @@ Proposed Change
 notifications message priority. New handler for ERROR priority will be added.
 
 2. Plugin with indexers and notification handlers for ironic nodes, ports and
-chassis shoud be implemented.
+chassis should be implemented.
 
-3. Custom Searchlight config should be used with ironic because ironic uses
+3. Custom Searchlight configurations should be used with ironic because ironic uses
 own hardcoded ``ironic_versioned_notifications`` topic ([3]_).
 
 Alternatives
