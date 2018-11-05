@@ -124,8 +124,8 @@ plugin, any filtering of notifications to be actually transmitted from
 Searchlight to Zaqar can further be handled there. Leaving the error handling
 to the plugin makes sense because some consumers may care about lost
 notifications while others may not. For example, a mail program displays
-messages as they arrive, but occassionally the VPN goes down, or there is no
-wireless connectity or other problem. The mail reader then may on reconnect
+messages as they arrive, but occasionally the VPN goes down, or there is no
+wireless connectivity or other problem. The mail reader then may on reconnect
 just issue a mail-synch. It is in this vein that we leave notification
 handling to the plugin and its associated consumer and its end-user  API.
 Essentially re-try behavior, re-synch behavior are all left to the

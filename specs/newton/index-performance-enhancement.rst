@@ -118,7 +118,7 @@ the "fine" level we will be considering.
 
 Since we are already using bulk commands for Elasticsearch re-indexing, we will
 place all of the Elasticsearch re-indexing into a single thread. Considering
-that this iwll be I/O bound on Elasticsearch's side, There does not appear
+that this will be I/O bound on Elasticsearch's side, There does not appear
 to be any advantage of doing an Elasticsearch re-indexing for each resource type
 in a separate thread.
 
@@ -133,7 +133,7 @@ index, will be placed in a single worker in the thread pool.
 There may be a large number of plugins used with Searchlight. If each plugin
 has its own thread, we may be using a lot of threads. Instead of having a single
 thread map to a single plugin, we will use a thread pool. This will keep the
-number of threads to a managable level while still allowing for an appropriate
+number of threads to a manageable level while still allowing for an appropriate
 level of asynchronous re-indexing. The size of the thread pool can be changed
 through a configuration option.
 

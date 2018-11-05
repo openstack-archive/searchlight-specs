@@ -19,7 +19,7 @@ Ironic plugin
 https://blueprints.launchpad.net/searchlight/+spec/ironic-plugin
 
 This spec is proposed to add ironic plugin for Searchlight. Ironic is OpenStack
-baremetal service. Plugin should support these baremetal resourses: nodes
+baremetal service. Plugin should support these baremetal resources: nodes
 (OS::Ironic::Node), ports (OS::Ironic::Port) and chassis (OS::Ironic::Chassis).
 
 Problem Description

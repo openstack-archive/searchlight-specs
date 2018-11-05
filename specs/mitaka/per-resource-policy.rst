@@ -57,7 +57,7 @@ The ideal long-term solution (which is one that this proposal drives towards)
 is to consume the service ``policy.json`` files as does horizon. Ultimately
 the hard-coded RBAC rules might be expressed as policy rules in many cases,
 allowing greater configuration flexibility (for instance, restricting access
-to a resource to the user that created it and not the projec/tenant). This
+to a resource to the user that created it and not the project/tenant). This
 will make it easier to keep searchlight deployments in sync with the rules
 deployed with each service.
 
