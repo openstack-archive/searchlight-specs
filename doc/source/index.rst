@@ -23,8 +23,6 @@ Specifications
    :maxdepth: 2
 
    specs/stein/index
-   specs/rocky/index
-   specs/queens/index
    specs/pike/index
    specs/ocata/index
    specs/newton/index
