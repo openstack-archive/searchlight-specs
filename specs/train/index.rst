@@ -1,5 +1,5 @@
 ================================
-Searchlight Stein Specifications
+Searchlight Train Specifications
 ================================
 
 .. toctree::

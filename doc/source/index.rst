@@ -22,7 +22,7 @@ Specifications
    :glob:
    :maxdepth: 2
 
-   specs/stein/index
+   specs/train/index
    specs/pike/index
    specs/ocata/index
    specs/newton/index
