@@ -69,9 +69,11 @@ The following Tacker resource information will be indexed:
 
 * Network Services (NS)
 
+* Virtual Infrastructure Managers (VIM)
+
 * Virtual Network Functions (VNF)
 
-* Virtual Network Function Forwarding Graph (VNFFG)
+* Virtual Network Function Forwarding Graphs (VNFFG)
 
 
 Alternatives
