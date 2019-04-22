@@ -254,7 +254,7 @@ References
     https://blueprints.launchpad.net/searchlight/+spec/zero-downtime-reindexing
 
 [2] External versions added to ElasticSearch documents is described here:
-    https://review.openstack.org/#/c/255751/
+    https://review.opendev.org/#/c/255751/
 
 [3] ElasticSearch *document* garbage collection is discussed here:
     https://www.elastic.co/blog/elasticsearch-versioning-support

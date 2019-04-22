@@ -69,6 +69,6 @@ References
 ==========
 .. [1] http://docs.openstack.org/developer/nova/api_microversions.html
 .. [2] https://blueprints.launchpad.net/nova/+spec/user-settable-server-description
-.. [3] http://git.openstack.org/cgit/openstack/nova/tree/nova/api/openstack/rest_api_version_history.rst
+.. [3] https://opendev.org/openstack/nova/src/branch/master/nova/api/openstack/compute/rest_api_version_history.rst
 .. [4] https://blueprints.launchpad.net/nova/+spec/remove-legacy-v2-api-code
 

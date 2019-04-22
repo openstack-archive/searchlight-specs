@@ -47,5 +47,5 @@ References
 
 [0] https://github.com/openstack/nova/blob/master/nova/objects/service.py#L309-L315
 [1] http://docs.openstack.org/developer/nova/services.html#the-nova-service-module
-[2] https://review.openstack.org/#/c/315312/11/nova/notifications/objects/compute_node.py
+[2] https://review.opendev.org/#/c/315312/11/nova/notifications/objects/compute_node.py
 [3] https://github.com/openstack/searchlight/blob/master/searchlight/elasticsearch/plugins/nova/notification_handler.py#L107

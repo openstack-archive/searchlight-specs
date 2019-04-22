@@ -52,5 +52,5 @@ None
 References
 ==========
 .. [1] http://specs.openstack.org/openstack/ironic-specs/specs/approved/notifications.html
-.. [2] https://review.openstack.org/#/c/347242
+.. [2] https://review.opendev.org/#/c/347242
 .. [3] http://docs.openstack.org/developer/ironic/dev/notifications.html

@@ -105,7 +105,7 @@ based on the request context::
   }
 
 Filters are cached and very fast. An alternative, once we switch to using
-aliases (see the `zero downtime spec <https://review.openstack.org/#/c/245222/>`_
+aliases (see the `zero downtime spec <https://review.opendev.org/#/c/245222/>`_
 proposal), is applying the filter on the alias::
 
   {
@@ -220,6 +220,6 @@ References
 ==========
 
 * https://bugs.launchpad.net/searchlight/+bug/1504399
-* https://review.openstack.org/#/c/233225/ (patch for above)
+* https://review.opendev.org/#/c/233225/ (patch for above)
 * `Shield <https://www.elastic.co/guide/en/shield/current/index.html>`_
 * https://www.elastic.co/guide/en/elasticsearch/guide/current/faking-it.html
