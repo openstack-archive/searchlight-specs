@@ -34,6 +34,7 @@ extensions = ['sphinx.ext.autodoc',
               'sphinxcontrib.seqdiag',
               'sphinxcontrib.nwdiag',
               'openstackdocstheme',
+              'sphinxcontrib.rsvgconverter',
              ]
 
 todo_include_todos = True
@@ -184,13 +185,18 @@ latex_elements = {
 
 # Additional stuff for the LaTeX preamble.
 #'preamble': '',
+    # openany: Skip blank pages in generated PDFs
+    'extraclassoptions': 'openany,oneside',
+    'makeindex': '',
+    'printindex': '',
+    'preamble': r'\setcounter{tocdepth}{3}',
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'Searchlight-specs.tex', u'Searchlight Specs',
-   u'OpenStack Searchlight Team', 'manual'),
+  ('index', 'doc-searchlight-specs.tex', u'Searchlight Specs',
+   u'OpenStack Searchlight Team', 'manual', True),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -211,7 +217,10 @@ latex_documents = [
 #latex_appendices = []
 
 # If false, no module index is generated.
-#latex_domain_indices = True
+latex_domain_indices = False
+
+# Disable usage of xindy https://bugzilla.redhat.com/show_bug.cgi?id=1643664
+latex_use_xindy = False
 
 # -- Options for Texinfo output ------------------------------------------------
 
