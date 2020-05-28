@@ -9,4 +9,4 @@ sphinxcontrib-seqdiag>=0.8.5 # BSD
 flake8
 doc8>=0.6.0 # Apache-2.0
 Pillow>=2.4.0
-sphinx>=1.8.0,!=2.1.0 # BSD
+sphinx>=2.0.0,!=2.1.0 # BSD
